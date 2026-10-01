@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|c:\\users\\urban\\documents\\stage\\esamefinale\\quizesamefinale\\quizesamefinale\\wwwroot\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|solutionrelative:quizesamefinale\\wwwroot\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|c:\\users\\urban\\documents\\stage\\esamefinale\\quizesamefinale\\quizesamefinale\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|solutionrelative:quizesamefinale\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|c:\\users\\urban\\documents\\stage\\esamefinale\\quizesamefinale\\quizesamefinale\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|solutionrelative:quizesamefinale\\controllers\\examcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|c:\\users\\urban\\documents\\stage\\esamefinale\\quizesamefinale\\quizesamefinale\\data\\esame.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|solutionrelative:quizesamefinale\\data\\esame.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|c:\\users\\urban\\documents\\stage\\esamefinale\\quizesamefinale\\quizesamefinale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AF235A5-A634-8D0A-CFB0-B15AA9CEC245}|QuizEsameFinale\\QuizEsameFinale.csproj|solutionrelative:quizesamefinale\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Esame.csv",
+              "DocumentMoniker": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\Data\\Esame.csv",
+              "RelativeDocumentMoniker": "QuizEsameFinale\\Data\\Esame.csv",
+              "ToolTip": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\Data\\Esame.csv",
+              "RelativeToolTip": "QuizEsameFinale\\Data\\Esame.csv",
+              "ViewState": "AgIAAMEBAAAAAAAAAAAwwNYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-09-17T14:18:35.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExamController.cs",
+              "DocumentMoniker": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\Controllers\\ExamController.cs",
+              "RelativeDocumentMoniker": "QuizEsameFinale\\Controllers\\ExamController.cs",
+              "ToolTip": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\Controllers\\ExamController.cs",
+              "RelativeToolTip": "QuizEsameFinale\\Controllers\\ExamController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAkwKEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T14:14:27.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.html",
+              "DocumentMoniker": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\wwwroot\\test.html",
+              "RelativeDocumentMoniker": "QuizEsameFinale\\wwwroot\\test.html",
+              "ToolTip": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\wwwroot\\test.html",
+              "RelativeToolTip": "QuizEsameFinale\\wwwroot\\test.html",
+              "ViewState": "AgIAABcBAAAAAAAAAAAAADkBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-09-17T14:01:21.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "QuizEsameFinale\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\wwwroot\\index.html",
+              "RelativeToolTip": "QuizEsameFinale\\wwwroot\\index.html",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAAEUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-09-17T13:37:44.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\Program.cs",
+              "RelativeDocumentMoniker": "QuizEsameFinale\\Program.cs",
+              "ToolTip": "C:\\Users\\urban\\Documents\\Stage\\EsameFinale\\QuizEsameFinale\\QuizEsameFinale\\Program.cs",
+              "RelativeToolTip": "QuizEsameFinale\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T14:29:16.339Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
