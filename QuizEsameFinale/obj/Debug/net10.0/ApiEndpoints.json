@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "QuizEsameFinale.Controllers.ExamController",
+    "Method": "GetRandomQuestions",
+    "RelativePath": "api/Exam/questions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuizEsameFinale.Controllers.ExamController",
+    "Method": "SubmitExam",
+    "RelativePath": "api/Exam/submit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userAnswers",
+        "Type": "System.Collections.Generic.List\u00601[[QuizEsameFinale.Controllers.UserAnswerDto, QuizEsameFinale, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

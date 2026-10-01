@@ -1,0 +1,314 @@
+<!-- File: wwwroot/test.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <meta name="description" content="Artimate Exam Simulation Test">
+
+    <title>Exam Simulation - Artimate</title>
+
+    <!-- Mobirise and Bootstrap stylesheets -->
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Epilogue:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=kRMqy6">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=kRMqy6" type="text/css">
+
+    <style>
+        /* Sfondo Blu Scuro Uniforme */
+        body, html {
+            background-color: #051c33 !important;
+            color: #ffffff;
+            font-family: 'Epilogue', sans-serif;
+        }
+
+        /* Forza la sezione a usare il blu scuro ed evita sfondi residui */
+        section.header19, .cid-sFGzrhlvIh {
+            background-image: none !important;
+            background-color: #051c33 !important;
+        }
+
+        .quiz-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .option-btn {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 1.1rem;
+            text-align: left;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            /* Opzione selezionata in Blu (#0d6efd) */
+            .option-btn.selected {
+                background-color: #0d6efd !important;
+                border-color: #0d6efd !important;
+                color: white;
+            }
+
+        .result-box {
+            background: #0a2540;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.9);
+            max-height: 80vh;
+            overflow-y: auto;
+            text-align: left;
+            border: 1px solid #1d3557;
+        }
+
+        /* Badge numero riga CSV in alto a destra */
+        .row-badge {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #0d6efd;
+            font-weight: bold;
+            font-size: 1rem;
+            background: rgba(13, 110, 253, 0.1);
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid #0d6efd;
+            z-index: 10;
+        }
+
+        /* Colore Arancione per il testo della domanda */
+        #questionTitle, #questionTitle strong {
+            color: #fd7e14 !important;
+        }
+
+        /* Bottoni primari in Arancione (#fd7e14) */
+        .btn-primary {
+            background-color: #fd7e14 !important;
+            border-color: #fd7e14 !important;
+            color: white !important;
+        }
+
+            .btn-primary:hover {
+                background-color: #e8590c !important;
+                border-color: #e8590c !important;
+            }
+    </style>
+</head>
+<body>
+
+    <section data-bs-version="5.1" class="header19 cid-sFGzrhlvIh mbr-fullscreen position-relative" id="header19-3">
+
+        <!-- Badge ID riga CSV -->
+        <div id="rowBadge" class="row-badge">Row: -</div>
+
+        <div class="container quiz-container">
+            <div class="col-md-12 col-lg-10 m-auto" id="quizInterface">
+
+                <!-- Contatore domande x/30 -->
+                <p id="questionCounter" class="mbr-text mbr-white mbr-fonts-style display-6 mb-2 text-center" style="color: #0d6efd; font-weight: bold;">Loading...</p>
+
+                <!-- Titolo / Testo della domanda (Arancione) -->
+                <h1 id="questionTitle" class="mbr-section-title mbr-fonts-style mb-4 display-5 text-center"><strong>Fetching questions from server...</strong></h1>
+
+                <!-- Griglia delle 4 opzioni -->
+                <div class="row pt-3 justify-content-center w-100 mx-auto">
+                    <div class="col-12 col-md-6 mb-3">
+                        <button class="btn btn-outline-light option-btn display-7" onclick="selectOption(0)" id="opt0">Option 1</button>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <button class="btn btn-outline-light option-btn display-7" onclick="selectOption(1)" id="opt1">Option 2</button>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <button class="btn btn-outline-light option-btn display-7" onclick="selectOption(2)" id="opt2">Option 3</button>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <button class="btn btn-outline-light option-btn display-7" onclick="selectOption(3)" id="opt3">Option 4</button>
+                    </div>
+                </div>
+
+                <!-- Pulsanti di navigazione inferiore -->
+                <div class="row mt-4 w-100 mx-auto justify-content-between">
+                    <div class="col-6 text-start">
+                        <button class="btn btn-primary display-4 px-4" onclick="prevQuestion()" id="prevBtn">Previous</button>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-secondary display-4 px-4" onclick="nextQuestion()" id="nextBtn">Next</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Box dei Risultati (Nascosto di default) -->
+            <div class="col-md-12 col-lg-10 m-auto d-none" id="resultInterface">
+                <div class="result-box">
+                    <h2 class="text-center mb-4" style="color: #0d6efd;"><strong>Exam Results Summary</strong></h2>
+                    <p id="scoreSummary" class="lead text-center mb-4"></p>
+                    <hr style="border-color: #1d3557;">
+                    <h4 class="mb-3">Detailed Breakdown of Mistakes:</h4>
+                    <div id="mistakesContainer"></div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary display-4 px-4" onclick="location.reload()">Restart Exam</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap e script di Mobirise -->
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/ytplayer/index.js"></script>
+    <script src="assets/vimeoplayer/player.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+
+    <script>
+                let quizData = [];
+                let currentQuestionIndex = 0;
+                let userAnswersMap = {};
+
+                async function fetchQuestions() {
+                    try {
+                        const response = await fetch('/api/exam/questions');
+                        if (!response.ok) {
+                            const errData = await response.json();
+                            throw new Error(errData.error || 'Failed to fetch questions from the server.');
+                        }
+                        quizData = await response.json();
+                        if (quizData && quizData.length > 0) {
+                            loadQuestion();
+                        } else {
+                            document.getElementById('questionTitle').innerText = 'No questions found in dataset.';
+                        }
+                    } catch (error) {
+                        document.getElementById('questionCounter').innerText = 'Error';
+                        document.getElementById('questionTitle').innerText = 'Error loading exam: ' + error.message;
+                    }
+                }
+
+                function loadQuestion() {
+                    if (!quizData || quizData.length === 0) return;
+                    const q = quizData[currentQuestionIndex];
+
+                    document.getElementById('questionCounter').innerText = `${currentQuestionIndex + 1}/${quizData.length}`;
+                    document.getElementById('rowBadge').innerText = `CSV Row: ${q.id}`;
+                    document.getElementById('questionTitle').innerHTML = `<strong>${q.question}</strong>`;
+
+                    for (let i = 0; i < 4; i++) {
+                        const btn = document.getElementById(`opt${i}`);
+                        const optionText = q.options[i] || '';
+                        btn.innerText = optionText;
+
+                        if (userAnswersMap[q.id] === optionText) {
+                            btn.classList.add('selected');
+                            btn.classList.remove('btn-outline-light');
+                        } else {
+                            btn.classList.remove('selected');
+                            btn.classList.add('btn-outline-light');
+                        }
+                    }
+
+                    document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
+                    document.getElementById('nextBtn').innerText = currentQuestionIndex === quizData.length - 1 ? 'Finish' : 'Next';
+                }
+
+                function selectOption(optionIndex) {
+                    if (!quizData || quizData.length === 0) return;
+                    const q = quizData[currentQuestionIndex];
+                    const selectedText = q.options[optionIndex];
+
+                    userAnswersMap[q.id] = selectedText;
+                    loadQuestion();
+                }
+
+                async function nextQuestion() {
+                    if (currentQuestionIndex < quizData.length - 1) {
+                        currentQuestionIndex++;
+                        loadQuestion();
+                    } else {
+                        await submitExam();
+                    }
+                }
+
+                function prevQuestion() {
+                    if (currentQuestionIndex > 0) {
+                        currentQuestionIndex--;
+                        loadQuestion();
+                    }
+                }
+
+                async function submitExam() {
+                    const submissionPayload = quizData.map(q => ({
+                        questionId: q.id,
+                        selectedOption: userAnswersMap[q.id] || ""
+                    }));
+
+                    document.getElementById('rowBadge').style.display = 'none';
+                    document.getElementById('questionTitle').innerText = 'Evaluating exam results...';
+                    document.getElementById('quizInterface').classList.add('d-none');
+
+                    try {
+                        const response = await fetch('/api/exam/submit', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(submissionPayload)
+                        });
+
+                        if (!response.ok) {
+                            throw new Error('Failed to submit exam answers.');
+                        }
+
+                        const result = await response.json();
+                        renderResults(result);
+                    } catch (error) {
+                        alert('Submission error: ' + error.message);
+                        document.getElementById('rowBadge').style.display = 'block';
+                        document.getElementById('quizInterface').classList.remove('d-none');
+                        loadQuestion();
+                    }
+                }
+
+                renderResults = function(result) {
+                    document.getElementById('resultInterface').classList.remove('d-none');
+
+                    const summaryText = `Total Questions: ${result.total} | Correct Answers: <span style="color: #0d6efd;">${result.correct}</span> | Wrong Answers: <span style="color: #dc3545;">${result.wrong}</span>`;
+                    document.getElementById('scoreSummary').innerHTML = summaryText;
+
+                    const container = document.getElementById('mistakesContainer');
+                    container.innerHTML = '';
+
+                    if (result.mistakes.length === 0) {
+                        container.innerHTML = '<p class="text-success text-center">Congratulations! You answered all questions correctly!</p>';
+                        return;
+                    }
+
+                    result.mistakes.forEach((m, idx) => {
+                        const item = document.createElement('div');
+                        item.className = 'mb-3 p-3 rounded border border-secondary';
+                        item.style.backgroundColor = '#051c33';
+                        item.innerHTML = `
+                            <p><strong>#${idx + 1}. ${m.question}</strong></p>
+                            <p class="mb-1 text-danger">Your Answer: ${m.userAnswer}</p>
+                            <p class="mb-0 text-success">Correct Answer: ${m.correctAnswer}</p>
+                        `;
+                        container.appendChild(item);
+                    });
+                }
+
+                window.onload = function() {
+                    fetchQuestions();
+                };
+    </script>
+</body>
+</html>
